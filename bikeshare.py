@@ -128,8 +128,8 @@ def time_stats(df):
         if view_data == 'yes':
             print(df.loc[n:n+4])
             n += 5
-            continue_data = input('Would you like to continue to see raw data? Enter yes or no please: ').lower()
-            if continue_data == 'no':
+            more_data = input('Would you like to continue to see raw data? Enter yes or no please: ').lower()
+            if more_data == 'no':
                 break
         else:
             break
@@ -163,8 +163,8 @@ def station_stats(df):
         if view_data == 'yes':
             print(df.loc[n:n+4])
             n += 5
-            continue_data = input('Would you like to continue to see raw data? Enter yes or no please: ').lower()
-            if continue_data == 'no':
+            more_data = input('Would you like to continue to see raw data? Enter yes or no please: ').lower()
+            if more_data == 'no':
                 break
         else:
             break
@@ -190,15 +190,15 @@ def trip_duration_stats(df):
     avg_travel_time = df['Trip Duration'].mean()
     print('Average travel time is: ', avg_travel_time)
 
-    # Ask user to see raw data until he indicates to stop
+    # Ask user to see 5 lines of raw data until he indicates to stop
     n = 0
     view_data = input('\n Would you like to see the raw data? Enter yes or no:  \n').lower()
     while True:
         if view_data == 'yes':
             print(df.loc[n:n+4])
             n += 5
-            continue_data = input('Would you like to continue to see raw data? Enter yes or no please: ').lower()
-            if continue_data == 'no':
+            more_data = input('Would you like to continue to see raw data? Enter yes or no please: ').lower()
+            if more_data == 'no':
                 break
         else:
             break
@@ -251,8 +251,8 @@ def user_stats(df):
         if view_data == 'yes':
             print(df.loc[n:n+4])
             n += 5
-            continue_data = input('Would you like to continue to see the raw data? Enter yes or no please: ').lower()
-            if continue_data == 'no':
+            more_data = input('Would you like to continue to see the raw data? Enter yes or no please: ').lower()
+            if more_data == 'no':
                 break
         else:
             break
